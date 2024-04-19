@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+hr {
+    margin-bottom: 1rem;
+}
+
+header {
+    background-color: rgb(44, 23, 63);
+    padding: 18px 12px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-nome {
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+.nav-nome::before {
+    content: '</>Gabriel';
+}
+
+.nav-bar a {
+    padding-left: 1rem;
+    font-style: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav-button {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 30vh;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 40%;
+    height: auto;
+    border: 5px solid rgb(44, 23, 63);;
+    border-radius: 60%;
+}
+
+
+#curriculo {
+    margin-bottom: 1rem;
+}
+
+#curriculo p::before {
+    content: "> ";
+}
+
+#portifolio {
+    margin-bottom: 1rem;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: .5rem;
+    border: 5px solid rgb(44, 23, 63);
+    border-radius: 15px;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    background-color: rgb(44, 23, 63);
+}
+
+#contato h1 {
+    color: aliceblue;
+}
+
+#contato i {
+    margin: 0 .5rem 1rem;
+    font-size: 25px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+
+    body {
+        max-width: 1200px;
+    }
+
+    main {
+        margin: 0.5rem;
+    }
+
+    img {
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .sobre {
+        flex-direction: column-reverse;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-button {
+        display: block;
+        font-size: 30px;
+        color: aliceblue;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-bar.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(44, 23, 63);
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .nav-bar.open a {
+        margin-bottom: 10px;
+    }
+
+    .nav-bar.open a:hover {
+        font-size: 20px;
+    }
+}
